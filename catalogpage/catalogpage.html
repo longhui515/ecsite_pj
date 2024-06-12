@@ -5,12 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品一覧</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="product-list-container">
-        <h1>商品一覧</h1>
-        <div id="productList" class="product-list"></div>
-    </div>
+    <header>
+        <div class="nav-bar">
+            <div class="left-menu">
+                <span>サイト名</span>
+                <a href="#">商品一覧</a>
+            </div>
+            <div class="right-menu">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#" class="login-btn">ログイン</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <span>San Francisco, California</span>
+            <span>Send deals</span>
+            <input type="text" placeholder="Search for anything...">
+        </div>
+    </header>
+    <main>
+        <div class="featured">
+            <img src="dummy-image.png" alt="Featured">
+            <div class="featured-text">
+                <h1>Dummy Text</h1>
+                <p>Please write dummy text!</p>
+            </div>
+        </div>
+        <section class="products-section">
+            <h2>Recommended</h2>
+            <div class="product-carousel">
+                <!-- 商品カードを6つ追加 -->
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+            </div>
+        </section>
+        <section class="products-section">
+            <h2>Best Seller</h2>
+            <div class="product-carousel">
+                <!-- 商品カードを6つ追加 -->
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+            </div>
+        </section>
+        <section class="products-section">
+            <h2>All Product</h2>
+            <div class="product-grid">
+                <!-- 商品カードを15個追加 -->
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+                <div class="product-card">
+                    <img src="product-image.png" alt="Product">
+                    <p>商品名</p>
+                    <p>¥1,500</p>
+                    <p>★★★★★ (100)</p>
+                </div>
+            </div>
+            <button class="load-more-btn">Load more (50+)</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <div class="footer-column">
+                <h3>Store Info</h3>
+                <a href="#">特定商取引法に基づく表記</a>
+                <a href="#">利用規約</a>
+                <a href="#">プライバシーポリシー</a>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <a href="#">よくある質問</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
