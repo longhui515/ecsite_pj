@@ -1,0 +1,149 @@
+/* ヘッダー */
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-line {
+    width: 100%;
+    border-top: 1px solid #e5e7eb;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.menu-group {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    margin-right: 20px;
+}
+
+.menu-item.right {
+    margin-right: 700px;
+}
+
+img.icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: ;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 2rem;
+    margin-top: 100px; /* ヘッダーと水平線の高さ分 */
+}
+
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.product-image {
+    width: 300px;
+    height: auto;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #e60000;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    display: block;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+/* フッター */
+.footer {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    font-size: 0.875rem;
+    color: #4b5564;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #4b5564;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
