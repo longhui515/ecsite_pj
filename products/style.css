@@ -1,0 +1,190 @@
+/* ヘッダー */
+header {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* ヘッダーを常に前面に表示するための z-index */
+  border-bottom: 1px solid #e5e7eb; /* グレーの水平線を追加 */
+}
+
+
+html {
+  font-family: sans-serif;
+}
+
+.resizeimage img {
+  width: 100%;
+}
+
+.title {
+  margin-right: 500px;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.menu-group {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.menu-item.right {
+  margin-right: 900px;
+}
+
+img.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 2rem;
+  margin-top: 100px; /* ヘッダーと水平線の高さ分 */
+}
+
+.product-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 5rem auto;
+  gap: 2rem;
+}
+
+
+.product-image1 {
+  width: 600px;
+  height: 600px;
+}
+.product-image2 {
+  width: 400px;
+  height: auto;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-details h2 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.product-details h3 {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 20px;
+  color: #e60000;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart {
+  display: block;
+  padding: 0.8rem 8rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.detail {
+  font-size: 16px;
+}
+
+/* body {
+    background: #333;
+  } */
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #4b5564;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 15px;
+  color: #4b5564;
+  background: #fff;
+}
+
+.footer__navi-heading {
+  font-weight: 600;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .md-flex {
+    display: flex;
+  }
+
+  .md-justify-between {
+    justify-content: space-between;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

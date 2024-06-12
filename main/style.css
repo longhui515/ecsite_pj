@@ -1,0 +1,163 @@
+/* ヘッダー */
+header {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* ヘッダーを常に前面に表示するための z-index */
+    border-bottom: 1px solid #e5e7eb;
+    /* グレーの水平線を追加 */
+}
+
+.login-box {
+    display: block;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* ここまで */
+html {
+    font-family: sans-serif;
+}
+
+.resizeimage img {
+    width: 100%;
+}
+
+.title {
+    margin-right: 500px;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 40px;
+}
+
+.menu-item.right {
+    margin-left: auto;
+}
+
+.menu-item.right+.menu-item.right {
+    margin-left: 10px;
+    /*右寄せアイテム同士の間隔を調整*/
+}
+
+main {
+    padding: 2rem;
+    align-items: center;
+}
+
+.main-title {
+    margin-right: 500px;
+}
+
+.main-list {
+    font-size: 18px;
+    list-style: none;
+    padding: 10px;
+    margin-left: 500px;
+}
+
+/* body {
+    background: #333;
+  } */
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #4b5564;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    padding: 2rem;
+    font-size: 15px;
+    color: #4b5564;
+    background: #fff;
+}
+
+.footer__navi-heading {
+    font-weight: 600;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.footer__navi li {
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .md-flex {
+        display: flex;
+    }
+
+    .md-justify-between {
+        justify-content: space-between;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .md-flex {
+        display: flex;
+    }
+
+    .md-justify-between {
+        justify-content: space-between;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
