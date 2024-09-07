@@ -10,23 +10,22 @@ import java.util.UUID;
 @EqualsAndHashCode
 @Getter
 public class UserViewModel {
-    private final UUID userId;
-    private final String name;
-    private final Integer age;
-    private final String address;
-    private final String email;
+    private final UUID id;
+    private final String familyName;
+    private final String firstName;
+    private final String mail;
 
-    public UserViewModel(UUID userId, String name, Integer age, String address, String email) {
-        this.userId = userId;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-        this.email = email;
+    public UserViewModel(UUID id, String familyName, String firstName, String mail) {
+        this.id = id;
+        this.familyName = familyName;
+        this.firstName = firstName;
+        this.mail = mail;
     }
 
-    public static UserViewModel adaptToUserVewModel(UUID userId, String name, Integer age, String address, String email) {
+    public static UserViewModel adaptToUserVewModel(UUID id,
+                                                    String familyName, String firstName, String mail) {
         return new UserViewModel(
-                userId, name, age, address, email
+                id, familyName, firstName, mail
         );
     }
 }

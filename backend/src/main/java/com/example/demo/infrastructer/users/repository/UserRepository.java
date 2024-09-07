@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Repository
@@ -18,6 +20,11 @@ public class UserRepository implements IUserRepositoryInterface {
     @Override
     public List<User> findAll() {
         return this.userJpaRepository.findAll().stream().map(UserDbModel::adaptToUser).collect(Collectors.toList());
+    }
+
+    @Override
+    public User findById(UUID id) {
+        return this.userJpaRepository.findAllById(id).adaptToUser();
     }
 
     @Override

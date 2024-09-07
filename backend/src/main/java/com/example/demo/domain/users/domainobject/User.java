@@ -4,30 +4,44 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
 @ToString
 @EqualsAndHashCode
 public class User {
-    private final UUID userId;
-    private final String name;
-    private final Integer age;
-    private final String address;
-    private final String email;
+    private final UUID id;
+    private final String familyName;
+    private final String familyNameRuby;
+    private final String firstName;
+    private final String firstNameRuby;
+
+    private final String mail;
+
+    private final String password;
+
+    private final LocalDateTime created;
+
+    private final LocalDateTime modified;
 
 
-    public User(UUID userId, String name, Integer age, String address, String email) {
-        this.userId = userId;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-        this.email = email;
+    public User(UUID id, String familyName, String familyNameRuby, String firstName, String firstNameRuby, String mail, String password, LocalDateTime created, LocalDateTime modified) {
+        this.id = id;
+        this.familyName = familyName;
+        this.familyNameRuby = familyNameRuby;
+        this.firstName = firstName;
+        this.firstNameRuby = firstNameRuby;
+        this.mail = mail;
+        this.password = password;
+        this.created = created;
+        this.modified = modified;
     }
 
-    public static User createUser(UUID userId, String name, Integer age, String address, String email) {
+    public static User createUser(UUID id, String familyName, String familyNameRuby, String firstName, String firstNameRuby,
+                                  String mail, String password, LocalDateTime created, LocalDateTime modified) {
         return new User(
-                userId, name, age, address, email
+                id, familyName, familyNameRuby, firstName, firstNameRuby, mail, password, created, modified
         );
     }
 }

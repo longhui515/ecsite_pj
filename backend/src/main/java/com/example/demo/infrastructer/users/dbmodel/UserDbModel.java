@@ -6,6 +6,7 @@ import lombok.*;
 
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -17,35 +18,45 @@ import java.util.UUID;
 public class UserDbModel implements Serializable {
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
-    private UUID userId;
+    @Column(name = "id")
+    private UUID id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "family_name")
+    private String familyName;
 
-    @Column(name = "age")
-    private Integer age;
+    @Column(name = "family_name_ruby")
+    private String familyNameRuby;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "first_name")
+    private String firstName;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "first_name_ruby")
+    private String firstNameRuby;
+
+    @Column(name = "mail")
+    private String mail;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "created")
+    private LocalDateTime created;
+
+    @Column(name = "modified")
+    private LocalDateTime modified;
 
     public User adaptToUser() {
         return new User(
-                this.userId,
-                this.name,
-                this.age,
-                this.address,
-                this.email
-        );
+                this.id,
+                this.familyName,
+                this.familyNameRuby,
+                this.firstName,
+                this.firstNameRuby,
+                mail, password, created, modified);
     }
 
     public static UserDbModel adaptToUserDbModel(User user) {
-        return new UserDbModel(
-                user.getUserId(), user.getName(), user.getAge(), user.getAddress(), user.getEmail()
-        );
-
+        return new UserDbModel(user.getId(), user.getFamilyName(), user.getFamilyNameRuby(), user.getFirstName(),
+                user.getFirstNameRuby(), user.getMail(), user.getPassword(), user.getCreated(), user.getModified());
     }
 }
