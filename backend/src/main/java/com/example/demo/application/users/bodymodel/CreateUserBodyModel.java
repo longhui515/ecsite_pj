@@ -8,8 +8,10 @@ import java.util.UUID;
 @Getter
 @ToString
 public class CreateUserBodyModel {
-    private String name;
-    private Integer age;
-    private String address;
-    private String email;
+    private String familyName;
+    private String familyNameRuby;
+    private String firstName;
+    private String firstNameRuby;
+    private String mail;
+    private String password;
 }

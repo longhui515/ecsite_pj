@@ -8,4 +8,6 @@ import java.util.UUID;
 
 public interface IUserJpaRepository extends JpaRepository<UserDbModel, UUID> {
     UserDbModel findAllById(UUID id);
+
+    Optional<UserDbModel> findByMail(String mail);
 }

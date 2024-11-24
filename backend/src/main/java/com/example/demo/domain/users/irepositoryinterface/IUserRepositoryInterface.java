@@ -3,6 +3,7 @@ package com.example.demo.domain.users.irepositoryinterface;
 import com.example.demo.domain.users.domainobject.User;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface IUserRepositoryInterface {
@@ -11,5 +12,7 @@ public interface IUserRepositoryInterface {
 
     public User findById(UUID id);
 
-    public void createUsers(List<User>userList);
+    public User createUser(User user);
+
+    public Optional<User> findByMail(String mail);
 }

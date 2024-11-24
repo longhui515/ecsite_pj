@@ -28,7 +28,13 @@ public class UserRepository implements IUserRepositoryInterface {
     }
 
     @Override
-    public void createUsers(List<User> userList) {
-        this.userJpaRepository.saveAll(userList.stream().map(UserDbModel::adaptToUserDbModel).collect(Collectors.toList()));
+    public User createUser(User user) {
+        this.userJpaRepository.save(UserDbModel.adaptToUserDbModel(user));
+        return this.userJpaRepository.findAllById(user.getId()).adaptToUser();
+    }
+
+    @Override
+    public Optional<User> findByMail(String mail) {
+        return this.userJpaRepository.findByMail(mail).map(UserDbModel::adaptToUser);
     }
 }
